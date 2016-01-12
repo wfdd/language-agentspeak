@@ -1,0 +1,127 @@
+# If this is your first time writing a language grammar, check out:
+#   - http://manual.macromates.com/en/language_grammars
+
+'scopeName': 'source.agentspeak'
+'name': 'AgentSpeak'
+'fileTypes': [
+  'asl'
+]
+'patterns': [
+  {
+    'include': '#comments'
+  }
+  {
+    'include': '#keywords'
+  }
+  {
+    'include': '#strings'
+  }
+  {
+    'include': '#supports'
+  }
+  {
+    'include': '#variables'
+  }
+]
+'repository':
+  'comments':
+    'patterns': [
+      {
+        'begin': '//'
+        'end': '$'
+        'name': 'comment.line.double-slash.asl'
+      }
+      {
+        'begin': '/\\*'
+        'end': '\\*/'
+        'name': 'comment.block.asl'
+      }
+    ]
+  'constants':
+    'patterns': [
+      {
+        'match': '\\btrue\\b'
+        'name': 'constants.language.asl'
+      }
+    ]
+  'keywords':
+    'patterns': [
+      {
+        'match': '\\b(if|while|for)\\b'
+        'name': 'keyword.control.asl'
+      }
+      {
+        'match': '\\b(div|mod|not)\\b'
+        'name': 'keyword.operator.asl'
+      }
+      {
+        'match': '(:|<-|\\.$)'
+        'name': 'keyword.other.asl'
+      }
+    ]
+  'strings':
+    'patterns': [
+      {
+        'begin': '"'
+        'end': '"'
+        'name': 'string.quoted.double.asl'
+      }
+    ]
+  'supports':
+    'patterns': [
+      {
+        'match': '[@][[:alnum:]]+\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '[+]([~])?[a-z][[:alnum:]]*\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '[-]([~])?[a-z][[:alnum:]]*\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '[+][!]([~])?[a-z][[:alnum:]]*\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '[+][?]([~])?[a-z][[:alnum:]]*\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '[-][!]([~])?[a-z][[:alnum:]]*\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '[-][?]([~])?[a-z][[:alnum:]]*\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '[!]([~])?[a-z][[:alnum:]]*\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '[!]([~])?[!][a-z][[:alnum:]]*\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '[?]([~])?[a-z][[:alnum:]]*\\b'
+        'name': 'markup.bold.asl'
+      }
+      {
+        'match': '\\b(?:[a-z][[:alnum:]]*)?\\.[[:alnum:]]+\\b'
+        'name': 'constant.language.asl'
+      }
+      {
+        'match': '\\b[a-z][[:alnum:]]*\\b'
+        'name': 'support.function.asl'
+      }
+    ]
+  'variables':
+    'patterns': [
+      {
+        'match': '\\b[A-Z][[:alnum:]]*\\b'
+        'name': 'variable.other.asl'
+      }
+    ]
