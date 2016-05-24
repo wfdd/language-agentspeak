@@ -70,58 +70,58 @@
   'supports':
     'patterns': [
       {
-        'match': '[@][[:alnum:]]+\\b'
-        'name': 'markup.bold.asl'
+        'match': '(?:^|\\s)[@]\\w+\\b'
+        'name': 'constant.numeric.asl'
       }
       {
-        'match': '[+]([~])?[a-z][[:alnum:]]*\\b'
-        'name': 'markup.bold.asl'
+        'match': '(?:^|\\s)[+]([~])?[a-z]\\w*\\b'
+        'name': 'support.constant.asl'
       }
       {
-        'match': '[-]([~])?[a-z][[:alnum:]]*\\b'
-        'name': 'markup.bold.asl'
-      }
-      {
-        'match': '[+][!]([~])?[a-z][[:alnum:]]*\\b'
-        'name': 'markup.bold.asl'
-      }
-      {
-        'match': '[+][?]([~])?[a-z][[:alnum:]]*\\b'
-        'name': 'markup.bold.asl'
-      }
-      {
-        'match': '[-][!]([~])?[a-z][[:alnum:]]*\\b'
-        'name': 'markup.bold.asl'
-      }
-      {
-        'match': '[-][?]([~])?[a-z][[:alnum:]]*\\b'
-        'name': 'markup.bold.asl'
-      }
-      {
-        'match': '[!]([~])?[a-z][[:alnum:]]*\\b'
-        'name': 'markup.bold.asl'
-      }
-      {
-        'match': '[!]([~])?[!][a-z][[:alnum:]]*\\b'
-        'name': 'markup.bold.asl'
-      }
-      {
-        'match': '[?]([~])?[a-z][[:alnum:]]*\\b'
-        'name': 'markup.bold.asl'
-      }
-      {
-        'match': '\\b(?:[a-z][[:alnum:]]*)?\\.[[:alnum:]]+\\b'
-        'name': 'constant.language.asl'
-      }
-      {
-        'match': '\\b[a-z][[:alnum:]]*\\b'
+        'match': '(?:^|\\s)[-]([~])?[a-z]\\w*\\b'
         'name': 'support.function.asl'
+      }
+      {
+        'match': '(?:^|\\s)[+][!]([~])?[a-z]\\w*\\b'
+        'name': 'support.function.asl'
+      }
+      {
+        'match': '(?:^|\\s)[+][?]([~])?[a-z]\\w*\\b'
+        'name': 'support.function.asl'
+      }
+      {
+        'match': '(?:^|\\s)[-][!]([~])?[a-z]\\w*\\b'
+        'name': 'support.function.asl'
+      }
+      {
+        'match': '(?:^|\\s)[-][?]([~])?[a-z]\\w*\\b'
+        'name': 'support.function.asl'
+      }
+      {
+        'match': '(?:^|\\s)[!]([~])?[a-z]\\w*\\b'
+        'name': 'support.function.asl'
+      }
+      {
+        'match': '(?:^|\\s)[!]([~])?[!][a-z]\\w*\\b'
+        'name': 'support.function.asl'
+      }
+      {
+        'match': '(?:^|\\s)[?]([~])?[a-z]\\w*\\b'
+        'name': 'support.function.asl'
+      }
+      {
+        'match': '(?:^|\\s)(?:[a-z]\\w*)?[.]\\w+\\b'
+        'name': 'support.variable.asl'
+      }
+      {
+        'match': '\\b[a-z]\\w*\\b'
+        'name': 'support.type.asl'
       }
     ]
   'variables':
     'patterns': [
       {
-        'match': '\\b[A-Z][[:alnum:]]*\\b'
+        'match': '\\b[A-Z]\\w*\\b'
         'name': 'variable.other.asl'
       }
     ]
